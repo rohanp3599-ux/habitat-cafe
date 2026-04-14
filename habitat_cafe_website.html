@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Habitat Cafe</title>
+
+<style>
+body {
+  margin:0;
+  font-family: 'Segoe UI', sans-serif;
+  background:#0a0a0a;
+  color:#fff;
+  scroll-behavior:smooth;
+}
+
+header {
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+  background-size:cover;
+}
+
+h1 {font-size:3.5rem;}
+
+.cta {
+  background:linear-gradient(45deg,#ff6600,#ff3300);
+  padding:15px 30px;
+  border-radius:50px;
+  text-decoration:none;
+  color:#fff;
+  margin-top:20px;
+  display:inline-block;
+  transition:0.3s;
+}
+
+.cta:hover {
+  transform:scale(1.1);
+  box-shadow:0 0 20px rgba(255,102,0,0.6);
+}
+
+section {
+  padding:80px 20px;
+  text-align:center;
+}
+
+.cards {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:25px;
+}
+
+.card {
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:20px;
+  width:260px;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-10px);
+}
+
+.gallery img {
+  width:250px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.gallery img:hover {
+  transform:scale(1.05);
+}
+
+form input {
+  display:block;
+  width:80%;
+  margin:10px auto;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+}
+
+footer {
+  padding:20px;
+  text-align:center;
+  background:#111;
+}
+
+/* Scroll Animation */
+.fade {
+  opacity:0;
+  transform:translateY(30px);
+  transition:1s;
+}
+
+.fade.show {
+  opacity:1;
+  transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="fade">
+  <h1>Hyderabad’s Favorite Rooftop Cafe</h1>
+  <p>Great coffee, stunning views, unforgettable nights.</p>
+  <a class="cta" href="https://www.google.com/maps/place/Habitat+Cafe/@17.4211614,78.4430845,17z" target="_blank">Get Directions</a>
+</header>
+
+<section class="fade">
+  <h2>⭐ 4.5 Rated by 1000+ Visitors</h2>
+  <p>"Best rooftop vibe in Hyderabad!"</p>
+  <p>"Perfect place for dates & hangouts"</p>
+  <a class="cta" href="https://www.google.com/maps/place/Habitat+Cafe/@17.4211614,78.4430845,17z" target="_blank">Get Directions</a>
+</section>
+
+<section class="fade">
+  <h2>Menu Highlights</h2>
+  <div class="cards">
+    <div class="card">☕ Premium Coffee</div>
+    <div class="card">🍰 Signature Desserts</div>
+    <div class="card">🥤 Crafted Drinks</div>
+  </div>
+  <a class="cta" href="https://www.google.com/maps/place/Habitat+Cafe/@17.4211614,78.4430845,17z" target="_blank">Get Directions</a>
+</section>
+
+<section class="fade gallery">
+  <h2>Gallery</h2>
+  <div class="cards">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+  </div>
+  <a class="cta" href="https://www.google.com/maps/place/Habitat+Cafe/@17.4211614,78.4430845,17z" target="_blank">Get Directions</a>
+</section>
+
+<section class="fade">
+  <h2>Get Exclusive Offers</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <a class="cta" href="https://www.google.com/maps/place/Habitat+Cafe/@17.4211614,78.4430845,17z" target="_blank">Get Directions</a>
+  </form>
+</section>
+
+<section class="fade">
+  <h2>Find Us</h2>
+  <iframe src="https://www.google.com/maps?q=Habitat+Cafe+Hyderabad&output=embed" width="100%" height="300" style="border-radius:15px;"></iframe>
+  <a class="cta" href="https://www.google.com/maps/place/Habitat+Cafe/@17.4211614,78.4430845,17z" target="_blank">Get Directions</a>
+</section>
+
+<footer>
+  <p>© 2026 Habitat Cafe</p>
+</footer>
+
+<script>
+
+// Scroll animation
+const elements = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add('show');
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>
